@@ -56,7 +56,7 @@ export default function RegisterPage() {
 
             const response =
                 await fetch(
-                    "http://localhost:8080/api/auth/register?" +
+                    `${process.env.NEXT_PUBLIC_API_URL}/api/auth/register?` +
                     params.toString(),
                     {
                         method: "POST",

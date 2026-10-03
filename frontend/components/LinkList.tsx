@@ -35,7 +35,7 @@ export default function LinkList({
     ) {
 
         const shortUrl =
-            `http://localhost:8080/${shortCode}`;
+            `${process.env.NEXT_PUBLIC_API_URL || "http://localhost:8080"}/${shortCode}`;
 
         try {
 
@@ -165,7 +165,7 @@ export default function LinkList({
                     {links.map((link) => {
 
                         const shortUrl =
-                            `http://localhost:8080/${link.shortCode}`;
+                            `${process.env.NEXT_PUBLIC_API_URL || "http://localhost:8080"}/${link.shortCode}`;
 
                         const isDeleting =
                             deletingCode ===

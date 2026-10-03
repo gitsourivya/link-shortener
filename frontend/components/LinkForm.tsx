@@ -136,7 +136,7 @@ export default function LinkForm({
             <div className="flex items-center">
 
                 <span className="bg-zinc-800 border border-r-0 border-zinc-700 rounded-l-lg px-3 py-3 text-sm text-zinc-500">
-                    localhost:8080/
+                   {process.env.NEXT_PUBLIC_API_URL || "http://localhost:8080"}/
                 </span>
 
                 <input
